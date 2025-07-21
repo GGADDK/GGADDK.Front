@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectIdPageView from "@/app/projects/[projectId]/_features/ui/ProjectIdPageView";
+import ProjectIdPageView from "./_features/ui/ProjectIdPageView";
 
 const ProjectIdPage: React.FC = () => <ProjectIdPageView />;
 

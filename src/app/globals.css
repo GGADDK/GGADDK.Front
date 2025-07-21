@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+html {
+    font-size: clamp(14px, calc(100vw / 1920 * 16), 20px);
+}
+.box {
+    @apply p-5
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

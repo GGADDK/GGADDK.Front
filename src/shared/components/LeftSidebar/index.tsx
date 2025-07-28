@@ -1,11 +1,31 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Image from "next/image";
-import { ProjectIconProps } from "@/shared/components/LeftSidebar/interfaces";
+import { ProjectIconProps, ToggleButtonProps } from "@/shared/components/LeftSidebar/interfaces";
 import TempImage from "../../../../public/globe.svg";
+
+const ToggleButton: React.FC<ToggleButtonProps> = ({children}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div>
+      <button onClick={()=>setIsOpen(!isOpen)}>Toggle</button>
+      <div className="flex flex-col pl-8">
+      {isOpen && children}
+      </div>
+    </div>
+  )
+}
 
 const ProjectDetailSidebar: React.FC = () => {
   return (
     <div className="w-65 h-full border-r-1 box">
+      <ToggleButton>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+      </ToggleButton>
       Details
     </div>
   )
